@@ -3,11 +3,12 @@ module.exports = {
 		browser: true,
 		es2021: true,
 		node: true,
+		global: true,
 	},
 	extends: "eslint:recommended",
 	overrides: [
 		{
-			files: ["**/*.test.js"],
+			files: ["**/*.test.js", "**/*.mock.js"],
 			env: { jest: true },
 			plugins: ["jest"],
 			extends: ["plugin:jest/recommended"],
